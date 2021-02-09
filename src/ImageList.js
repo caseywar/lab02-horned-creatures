@@ -9,7 +9,8 @@ export default class ImageList extends Component {
                 {
                     images.map(image =>
                         <ImageItem
-                            caption={image.title}
+                            title={image.title}
+                            picture={image.url}
                         />)
                 }
 
