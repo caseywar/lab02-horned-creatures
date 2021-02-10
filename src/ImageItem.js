@@ -8,7 +8,8 @@ export default class ImageItem extends Component {
             <div>
                 <div>{this.props.title}</div>
                 <img className='image' src={this.props.picture} alt={this.props.title}></img>
-            </div >
+                <p>{this.props.description}</p>
+            </div>
         )
     }
 }
