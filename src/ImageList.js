@@ -5,25 +5,30 @@ import images from './data.js'
 export default class ImageList extends Component {
     state = {
         keyword: '',
+        horns: '',
     }
 
-    handleChange = (e) => {
-        this.setState({
-            keyword: e.target.value
-        });
-    }
+    // handleChange = (e) => {
+    //     this.setState({
+    //         keyword: e.target.value
+    //     });
+    // }
+
+    // handleHornChange = (e) => {
+    //     this.setState({
+    //         horns: e.target.value
+    //     });
+    // }
 
     render() {
         const filteredImages = images.filter((ImageItem) => {
-            if (!this.state.keyword) return true;
+            if (!this.state.keyword && !this.state.horns) return true;
 
             if (ImageItem.keyword === this.state.keyword) return true;
+            if (ImageItem.horns === Number(this.state.horns)) return true;
             return false;
         })
 
-        // const filteredImagesNodes = filteredImages.map(ImageItem =>
-        //     <ImageItem
-        //         ImageItem={ImageItem} />);
         console.log(filteredImages)
 
         return (
@@ -47,6 +52,18 @@ export default class ImageList extends Component {
                     <option value='dragon'>dragon</option>
                 </select>
 
+                <select value={this.state.horns} onChange={(e) => {
+                    this.setState({
+                        horns: e.target.value
+                    })
+                }}>
+                    <option value=''>All Horns</option>
+                    <option value='1'>1</option>
+                    <option value='2'>2</option>
+                    <option value='3'>3</option>
+                    <option value='100'>100</option>
+                </select>
+
                 <div>
                     {
                         filteredImages.map(image =>
@@ -54,7 +71,7 @@ export default class ImageList extends Component {
                                 title={image.title}
                                 picture={image.url}
                                 description={image.description}
-                                type={image.keyword}
+                            // type={image.keyword}
                             />)
                     }
                 </div>
