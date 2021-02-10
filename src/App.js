@@ -10,7 +10,9 @@ export default class App extends Component {
         <header className='header'>
           <Header />
         </header>
-        <ImageList />
+        <div className='list'>
+          <ImageList />
+        </div>
       </div>
     )
   }
