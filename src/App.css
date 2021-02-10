@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   align-items: center;
+  background-color: rgb(205, 230, 169);
 }
 
 .header {
@@ -8,11 +9,15 @@
   color: red;
   text-align: center;
   align-items: center;
+  background-color: rgb(205, 230, 169);
+
 }
 
 .list {
   text-align: center;
   align-items: center;
+  background-color: rgb(205, 230, 169);
+
 }
 
 .image {
