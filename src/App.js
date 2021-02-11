@@ -49,23 +49,29 @@ export default class App extends Component {
         <div className='body'>
           <Header />
         </div>
-        <div className='body'>
-          Type
-          <Dropdown
-            currentValue={this.state.keyword}
-            handleChange={this.handleKeywordChange}
-            options={['narwhal', 'rhino', 'unicorn', 'unilego', 'triceratops', 'markhor', 'mouflon', 'addax', 'chameleon', 'lizard', 'dragon']}
+        <div>
+          <section className="dropdownTitles">
+            <span className='dropdowns'>Type</span>
+            <Dropdown
+              currentValue={this.state.keyword}
+              handleChange={this.handleKeywordChange}
+              options={['All Types', 'narwhal', 'rhino', 'unicorn', 'unilego', 'triceratops', 'markhor', 'mouflon', 'addax', 'chameleon', 'lizard', 'dragon']}
+            />
+          </section>
+        </div>
+        <div>
+          <section className="dropdownTitles">
+            <span className='dropdowns'>Horns</span>
+            <Dropdown
+              currentValue={this.state.horns}
+              handleChange={this.handleHornChange}
+              options={['All Horns', 1, 2, 3, 100]}
+            />
+          </section>
+          <ImageList
+            filteredImages={filteredImages}
           />
         </div>
-          Horns
-        <Dropdown
-          currentValue={this.state.horns}
-          handleChange={this.handleHornChange}
-          options={[1, 2, 3, 100]}
-        />
-        <ImageList
-          filteredImages={filteredImages}
-        />
 
 
       </div>

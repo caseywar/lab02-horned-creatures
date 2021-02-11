@@ -1,14 +1,63 @@
-.App {
-  text-align: center;
-  align-items: center;
+body {
   background-color: rgb(205, 230, 169);
 }
 
+
+.list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+}
 
 .image {
   width: 200px;
 }
 
+.dropdownTitles {
+  display: flex;
+  justify-content: center;
+}
+
 .body {
-  background-color: rgb(205, 230, 169);
+  text-align: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: 'Fredoka One', cursive;
+}
+
+/* .list {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  align-items:flex-start;
+} */
+
+.dropdowns {
+  font-family: 'Fredoka One', cursive;
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.animals{
+  padding: 10px;
+  border: solid 1px black;
+  margin: 5px;
+  max-width: 600px;
+  font-size: 15px;
+  color: rgb(9, 99, 99);
+  font-weight: bolder;
+  background-image: url(https://images-na.ssl-images-amazon.com/images/I/61j08lwDMrL._AC_SY355_.jpg);
+}
+
+.title {
+  font-size: 23px;
+  font-family: 'Fredoka One', cursive;
+
+}
+
+.horns {
+  border: solid 1px black;
+  background-color: rgba(91, 156, 158, 0.5);
 }
