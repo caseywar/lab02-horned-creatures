@@ -4,22 +4,11 @@
   background-color: rgb(205, 230, 169);
 }
 
-.header {
-  font-style: italic;
-  color: red;
-  text-align: center;
-  align-items: center;
-  background-color: rgb(205, 230, 169);
-
-}
-
-.list {
-  text-align: center;
-  align-items: center;
-  background-color: rgb(205, 230, 169);
-
-}
 
 .image {
   width: 200px;
+}
+
+.body {
+  background-color: rgb(205, 230, 169);
 }

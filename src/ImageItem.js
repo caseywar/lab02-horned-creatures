@@ -5,11 +5,12 @@ import './App.css'
 export default class ImageItem extends Component {
     render() {
         return (
-            <div>
-                <div>{this.props.title}</div>
-                <img className='image' src={this.props.picture} alt={this.props.title}></img>
-                <p>{this.props.description}</p>
-            </div>
+            <li>
+                <p>{this.props.imageItemProp.title}</p>
+                <img className='image' src={this.props.imageItemProp.url} alt={this.props.imageItemProp.title}></img>
+                <p>{this.props.imageItemProp.description}</p>
+                <p>{this.props.imageItemProp.horns}</p>
+            </li>
         )
     }
 }
